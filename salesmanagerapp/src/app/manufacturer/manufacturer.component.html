@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Manufacturers</th>
+            <th>Location</th>
+            <th>Contact</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <tr *ngFor="let manufacturer of manufacturers">
+            <td>
+              <a
+                [routerLink]="['/manufacturers', manufacturer.id]"
+                class="tile-link"
+              ></a
+              >{{ manufacturer.name }}
+            </td>
+            <td>{{ manufacturer.location }}</td>
+            <td>{{ manufacturer.contact }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-12 text-center">
+      <ul class="pagination pagination-lg pager" id="myPager"></ul>
+    </div>
+  </div>
+</div>

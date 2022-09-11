@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Retailers</th>
+            <th>Total units purchased</th>
+            <th>Total Value of Goods</th>
+            <th>Amount Paid</th>
+            <th>Amount to be paid</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <tr *ngFor="let invoice of invoices">
+            <td>
+              <a>NA</a>
+            </td>
+            <td>{{ invoice.unitPurchases }}</td>
+            <td>{{ invoice.totalValue }}</td>
+            <td>{{ invoice.amountPaid }}</td>
+            <td>{{ invoice.accountBalance }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-12 text-center">
+      <ul class="pagination pagination-lg pager" id="myPager"></ul>
+    </div>
+  </div>
+</div>
